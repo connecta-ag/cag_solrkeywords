@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'cag_solrkeywords'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pages.tx_cagsolrkeywords_keywords_lfactor">Keywords with low boost factor</label>
+			<label index="pages.tx_cagsolrkeywords_keywords_mfactor">Keywords with average boost factor</label>
+			<label index="pages.tx_cagsolrkeywords_keywords_hfactor">Keywords with high boost factor</label>
+            <label index="pages.tx_cagsolrkeywords_keywords_exclude">Exclude keywords (Page does not appear in search results)</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="pages.tx_cagsolrkeywords_keywords_lfactor">Keywords mit niedrigem Boost-Faktor</label>
+			<label index="pages.tx_cagsolrkeywords_keywords_mfactor">Keywords mit mittlerem Boost-Faktor</label>
+			<label index="pages.tx_cagsolrkeywords_keywords_hfactor">Keywords mit hohem Boost-Faktor</label>
+            <label index="pages.tx_cagsolrkeywords_keywords_exclude">Ausschluss-Keywords (Seite erscheint nicht in Suchergebnissen)</label>
+		</languageKey>
+	</data>
+</T3locallang>

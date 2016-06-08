@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>language labels for cag_solrkeywords</description>
+        <type>module</type>
+        <fileId>EXT:cag_solrkeywords/locallang.xml</fileId>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="title">Solr Keywords</label>
+            <label index="lowBoostFactor">Low Boost Factor</label>
+            <label index="middleBoostFactor">Average Boost Factor</label>
+            <label index="highBoostFactor">High Boost Factor</label>
+            <label index="excludeKeywords">Exclude Keywords</label>
+        </languageKey>
+    </data>
+</T3locallang>

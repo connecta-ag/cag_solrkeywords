@@ -1,0 +1,10 @@
+solrBoost {
+    # cat=cag_solrkeywords; type=float; label= LLL:EXT:cag_solrkeywords/locallang.xml:lowBoostFactor
+    lowBoostFactor = 45.0
+
+    # cat=cag_solrkeywords; type=float; label= LLL:EXT:cag_solrkeywords/locallang.xml:middleBoostFactor
+    middleBoostFactor = 50.0
+
+    # cat=cag_solrkeywords; type=float; label= LLL:EXT:cag_solrkeywords/locallang.xml:highBoostFactor
+    highBoostFactor = 55.0
+}

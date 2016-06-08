@@ -1,0 +1,45 @@
+plugin.tx_solr.index.queue.pages {
+    fields {
+
+        keywordslfactor_textM = SOLR_MULTIVALUE
+        keywordslfactor_textM {
+            field = tx_cagsolrkeywords_keywords_lfactor
+            separator = ,
+            removeEmptyValues = 1
+        }
+
+        keywordsmfactor_textM = SOLR_MULTIVALUE
+        keywordsmfactor_textM {
+            field = tx_cagsolrkeywords_keywords_mfactor
+            separator = ,
+            removeEmptyValues = 1
+        }
+
+        keywordshfactor_textM = SOLR_MULTIVALUE
+        keywordshfactor_textM {
+            field = tx_cagsolrkeywords_keywords_hfactor
+            separator = ,
+            removeEmptyValues = 1
+        }
+
+        keywordsexclude_textM = SOLR_MULTIVALUE
+        keywordsexclude_textM {
+            field = tx_cagsolrkeywords_keywords_exclude
+            separator = ,
+            removeEmptyValues = 1
+        }
+
+    }
+}
+
+plugin.tx_solr.search.query {
+    fields = keywordshfactor_textM^{$solrBoost.highBoostFactor}, keywordsmfactor_textM^{$solrBoost.middleBoostFactor}, keywordslfactor_textM^{$solrBoost.lowBoostFactor}, content^40.0, title^5.0, keywords^2.0, tagsH1^5.0, tagsH2H3^3.0, tagsH4H5H6^2.0, tagsInline^1.0
+    filter {
+		badKeywords = {title}
+		badKeywords {
+			wrap = -keywordsexclude_textM:(|)
+			data = GP:tx_solr|q
+		}
+    }
+}
+
